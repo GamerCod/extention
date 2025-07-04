@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(237, 237, 243);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode override */
+body.dark-mode {
+  background-color: black;
+  color: #ffffff;
+}
+
+
+
+
+header {
+    width: 1200px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 1% 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 1% 2%;
+}
+
+.theme-btn {
+    margin: 1% 2%;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+
+}
+
+
+.grid-header {
+    margin: 0 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.filter-btn {
+   display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-bttn{
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4c4aa1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.filter-bttn:hover {
+  background-color: #373685;
+}
+
+.filter-bttn.active {
+  background-color: #222;
+  color: #fff;
+}
+
+
+
+.box {
+    width: 350px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 12%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.img-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -65%;
+}
+
+.img-text h3 {
+    margin: 0;
+    color: blue;
+}
+
+.img-text p {
+    margin: 2% 0;
+    color: blue;
+}
+
+.btn-swi {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.Remove {
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+
+.oval {
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: red;
+    /* Default OFF */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    left: 100%;
+}
+
+/* The white circle (thumb) */
+.oval.thumb {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(140, 14, 199);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s ease;
+}
+/* When it's active (ON) */
+.oval.active {
+  background-color: rgb(228, 228, 238);
+}
+
+.oval.active .thumb {
+  left: 42px; /* Move to the right side */
+}
+
+
+.extension-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 0; /* 10px vertical, 0 horizontal */
+  padding: 0; 
+  margin: 0 4% 0 4%;
+}
+  
+
+@media (max-width: 768px) {
+  .extension-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px){
+  header{
+    width: 90%;
+  }
+}
