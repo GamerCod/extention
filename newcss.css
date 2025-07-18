@@ -34,6 +34,7 @@ header {
     background-color: transparent;
     text-decoration: none;
     border: none;
+    cursor: pointer;
 
 }
 
@@ -109,20 +110,20 @@ header {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-top: 10%;
 }
 
 .Remove {
+    border-radius: 20px;
+    background-color: transparent;
+    border-color: black 1px solid;
     width: 80px;
     height: 30px;
-    background-color: black;
-    color: white;
-    border-radius: 15px;
-    border: none;
 }
 
 .oval {
-    width: 80px;
-    height: 30px;
+    width: 40px;
+    height: 20px;
     border-radius: 15px;
     background-color: red;
     /* Default OFF */
@@ -131,28 +132,31 @@ header {
     transition: background-color 0.3s ease;
     border: none;
     left: 100%;
+    position: relative;
+    margin-top: 5%;
 }
 
-/* The white circle (thumb) */
-.oval.thumb {
-  width: 36px;
-  height: 36px;
-  background-color: rgb(140, 14, 199);
-  border-radius: 50%;
+.oval::before{
+  content: "";
+  width: 15px;
+  height: 15px;
   position: absolute;
   top: 2px;
   left: 2px;
-  transition: left 0.3s ease;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.3s ease;
+
 }
 /* When it's active (ON) */
 .oval.active {
-  background-color: rgb(228, 228, 238);
+  background-color: rgba(20, 231, 30, 0.829);
 }
 
-.oval.active .thumb {
-  left: 42px; /* Move to the right side */
+.oval.active::before {
+  transform: translateX(15px);
 }
-
 
 .extension-grid{
   display: grid;
