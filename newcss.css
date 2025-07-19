@@ -1,3 +1,184 @@
+ fix-index
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(237, 237, 243);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode override */
+body.dark-mode {
+  background-color: black;
+  color: #ffffff;
+}
+
+
+
+
+header {
+    width: 1200px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 1% 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 1% 2%;
+}
+
+.theme-btn {
+    margin: 1% 2%;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.grid-header {
+    margin: 0 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.filter-btn {
+   display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-bttn{
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4c4aa1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.filter-bttn:hover {
+  background-color: #373685;
+}
+
+.filter-bttn.active {
+  background-color: #222;
+  color: #fff;
+}
+
+
+
+.box {
+    width: 350px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 12%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.img-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -65%;
+}
+
+.img-text h3 {
+    margin: 0;
+    color: blue;
+}
+
+.img-text p {
+    margin: 2% 0;
+    color: blue;
+}
+
+.btn-swi {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10%;
+}
+
+.Remove {
+    border-radius: 20px;
+    background-color: transparent;
+    border-color: black 1px solid;
+    width: 80px;
+    height: 30px;
+}
+
+.oval {
+    width: 40px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: red;
+    /* Default OFF */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    left: 100%;
+    position: relative;
+    margin-top: 5%;
+}
+
+.oval::before{
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.3s ease;
+
+}
+/* When it's active (ON) */
+.oval.active {
+  background-color: rgba(20, 231, 30, 0.829);
+}
+
+.oval.active::before {
+  transform: translateX(15px);
+}
+
+.extension-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 0; /* 10px vertical, 0 horizontal */
+  padding: 0; 
+  margin: 0 4% 0 4%;
+}
+  
+
+@media (max-width: 768px) {
+  .extension-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px){
+  header{
+    width: 90%;
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -173,4 +354,5 @@ header {
   header{
     width: 90%;
   }
+ master
 }
