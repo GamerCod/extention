@@ -14,7 +14,6 @@ body.dark-mode {
 
 
 
-
 header {
     width: 1200px;
     height: 60px;
@@ -167,17 +166,6 @@ header {
   margin: 0 4% 0 4%;
 }
   
-
-@media (max-width: 768px) {
-  .extension-grid {
-    grid-template-columns: 1fr; /* Stack columns on smaller screens */
-  }
-}
-
-@media (max-width: 768px){
-  header{
-    width: 90%;
-  }
 
 body {
     margin: 0;
@@ -343,16 +331,3 @@ header {
   margin: 0 4% 0 4%;
 }
   
-
-@media (max-width: 768px) {
-  .extension-grid {
-    grid-template-columns: 1fr; /* Stack columns on smaller screens */
-  }
-}
-
-@media (max-width: 768px){
-  header{
-    width: 90%;
-  }
- master
-}
